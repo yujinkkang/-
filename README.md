@@ -42,7 +42,7 @@ algorithm_study
  &nbsp;&nbsp; ·  최소힙에 저장할 때<br/> 
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 아래서 위로 비교 : 새 노드를 '우선순위가 가장 낮다는 과정을 하고' '맨끝 위치'에 저장<br/>
  &nbsp;&nbsp; ·  최소힙에서 삭제할 때<br/> 
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 위에서 아래로 비교 : 우선 순위 큐에서의 데이터 삭제는 곧, 가장 우선순위가 높은 데이터('루트 노드)를 빼낸다는 의미가 된다. <br/>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 위에서 아래로 비교<br/>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 우선 순위 큐에서의 데이터 삭제는 곧, 가장 우선순위가 높은 데이터('루트 노드)를 빼낸다는 의미가 된다. <br/>
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp;루트노드를 삭제하면서 힙의 구조를 그대로 유지하는 게 삭제의 관건<br/>
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ▶ 삭제 과정<br/>
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1)루트 노드를 반환(삭제)하고 마지막 노드를 루트 노드 자리에 옮긴다.<br/>
