@@ -36,7 +36,7 @@ algorithm_study
  </p>
  <p>
  <최대힙과 최소힙><br/><br/>
- <a><img src ="https://api.ahribori.com/image/XgqyLSwQwvUL8-2QXmDVYLJQ.png"></img></a><br/>
+ <a><img src ="https://api.ahribori.com/image/XgqyLSwQwvUL8-2QXmDVYLJQ.png"></img></a><br/><br/>
  &nbsp;&nbsp; ·  루트노드에는 우선순위가 가장 높은 것이 자리잡게 된다.<br/>
  &nbsp;&nbsp; ·  마지막노드에는 우선순위가 가장 낮은 것이 자리잡게 된다.<br/>
  &nbsp;&nbsp; ·  최소힙에 저장할 때<br/> 
