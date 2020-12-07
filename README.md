@@ -56,3 +56,12 @@
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1)루트 노드를 반환(삭제)하고 마지막 노드를 루트 노드 자리에 옮긴다.<br/>
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2)비교진행<br/>
  </p>
+ 
+ 
+ ### java - PrriorityQueue 선언 방법
+ * 최소힙
+   - PriorityQueue<Integer> pq = new PriorityQueue<Integer>();
+ * 최대힙
+   - PriorityQueue<Integer> pq = new PriorityQueue<Integer>(Collections.reverseOrder());
+ 
+
