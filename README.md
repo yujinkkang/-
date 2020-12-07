@@ -60,8 +60,12 @@
  
  ### java - PrriorityQueue 선언 방법
  * 최소힙
+ ```swift
    - PriorityQueue<Integer> pq = new PriorityQueue<Integer>();
+ ```
  * 최대힙
+ ```swift
    - PriorityQueue<Integer> pq = new PriorityQueue<Integer>(Collections.reverseOrder());
+ ```
  
 
