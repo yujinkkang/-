@@ -58,7 +58,7 @@
  </p>
  
  
- ### ava - PriorityQueue 선언 방법
+ ### Java - PriorityQueue 선언 방법
  * 최소힙
  ```swift
    - PriorityQueue<Integer> pq = new PriorityQueue<Integer>();
