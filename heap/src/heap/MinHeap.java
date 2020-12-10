@@ -7,33 +7,33 @@ public class MinHeap {
 
 	public static void main(String[] args) {
 
-		PriorityQueue<Integer> pque = new PriorityQueue<>(); // ¿ì¼±¼øÀ§ Å¥ »ı¼º
+		PriorityQueue<Integer> pque = new PriorityQueue<>(); // ìš°ì„ ìˆœìœ„ í ìƒì„±
 
 		Scanner sc = new Scanner(System.in);
 
-		System.out.print("¿ä¼Ò¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä(,·Î ±¸ºĞ)"); // ex) 1,2,3,4,5
+		System.out.print("ìš”ì†Œë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”(,ë¡œ êµ¬ë¶„)"); // ex) 1,2,3,4,5
 		String element = sc.next();
 
-		String[] elementArray = element.split(","); // ÄŞ¸¶·Î ÀÚ¸£±â
+		String[] elementArray = element.split(","); // ì½¤ë§ˆë¡œ ìë¥´ê¸°
 
 		for (int i = 0; i < elementArray.length; i++) {
 
-			// System.out.print("¹è¿­ÀÇ "+"["+i+"]"+"¹øÂ° ¿ä¼Ò: ");
+			// System.out.print("ë°°ì—´ì˜ "+"["+i+"]"+"ë²ˆì§¸ ìš”ì†Œ: ");
 			// System.out.println(elementArray[i]);
 
-			pque.add(Integer.parseInt(elementArray[i])); // ¿ì¼±¼øÀ§ Å¥¿¡ ÀÔ·ÂÇÑ ¿ä¼ÒµéÀ» ³Ö¾îÁØ´Ù.
+			pque.add(Integer.parseInt(elementArray[i])); // ìš°ì„ ìˆœìœ„ íì— ì…ë ¥í•œ ìš”ì†Œë“¤ì„ ë„£ì–´ì¤€ë‹¤.
 		}
 
 		System.out.println("#############################");
-		System.out.println("<ÃÖ¼ÒÈü-MinHeap>");
-		System.out.println("---> root(¿ì¼±¼øÀ§°¡ °¡Àå ³ôÀ½)¿¡ °¡Àå ÀÛÀº °ªÀÌ À§Ä¡ÇÑ´Ù.");
+		System.out.println("<ìµœì†Œí™-MinHeap>");
+		System.out.println("---> root(ìš°ì„ ìˆœìœ„ê°€ ê°€ì¥ ë†’ìŒ)ì— ê°€ì¥ ì‘ì€ ê°’ì´ ìœ„ì¹˜í•œë‹¤.");
 
-		int pqueSize = pque.size(); // ¿ì¼±¼øÀ§ Å¥ÀÇ »çÀÌÁî
+		int pqueSize = pque.size(); // ìš°ì„ ìˆœìœ„ íì˜ ì‚¬ì´ì¦ˆ
 
 		for (int i = 1; i <= pqueSize; i++) {
-			System.out.print("[" + i + "]" + "¹øÂ° ¿ì¼±¼øÀ§¿¡ ÀÖ´Â ³ëµå: ");
-			System.out.println(pque.peek()); // ÇöÀç ¿ì¼±¼øÀ§°¡ °¡Àå ³ôÀº ³ëµå Ãâ·Â
-			pque.poll(); // ÇöÀç ¿ì¼±¼øÀ§°¡ °¡Àå ³ôÀº ³ëµå »èÁ¦
+			System.out.print("[" + i + "]" + "ë²ˆì§¸ ìš°ì„ ìˆœìœ„ì— ìˆëŠ” ë…¸ë“œ: ");
+			System.out.println(pque.peek()); // í˜„ì¬ ìš°ì„ ìˆœìœ„ê°€ ê°€ì¥ ë†’ì€ ë…¸ë“œ ì¶œë ¥
+			pque.poll(); // í˜„ì¬ ìš°ì„ ìˆœìœ„ê°€ ê°€ì¥ ë†’ì€ ë…¸ë“œ ì‚­ì œ
 		}
 		System.out.println("#############################");
 

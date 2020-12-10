@@ -6,7 +6,7 @@ public class Main {
 		int[] scoville = {1, 2, 3, 9, 10, 12};
 		int K = 7;
 		MoreSpicy_answer e = new MoreSpicy_answer();
-		System.out.println("¼¯Àº È½¼ö: " + e.solution(scoville, K));
+		System.out.println("ì„ì€ íšŸìˆ˜ : " + e.solution(scoville, K));
 	}
 
 }

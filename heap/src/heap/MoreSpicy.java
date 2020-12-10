@@ -8,51 +8,51 @@ public class MoreSpicy {
 
 	public static void main(String[] args) {
 
-		PriorityQueue<Integer> pque = new PriorityQueue<>(); // ¿ì¼±¼øÀ§ Å¥ »ı¼º
+		PriorityQueue<Integer> pque = new PriorityQueue<>(); // ìš°ì„ ìˆœìœ„ í ìƒì„±
 
 		Scanner sc = new Scanner(System.in);
 
-		System.out.print("°¢ À½½ÄÀÇ ½ºÄÚºô Áö¼ö¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä(,·Î ±¸ºĞ)"); // ex) 1,2,3,4,5
+		System.out.print("ê° ìŒì‹ì˜ ìŠ¤ì½”ë¹Œ ì§€ìˆ˜ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”(,ë¡œ êµ¬ë¶„)"); // ex) 1,2,3,4,5
 		String element = sc.next();
 
-		if (!element.isEmpty()) { // ºñ¾îÀÖ´ÂÁö È®ÀÎ
+		if (!element.isEmpty()) { // ë¹„ì–´ìˆëŠ”ì§€ í™•ì¸
 
-			String[] elementArray = element.split(","); // ÄŞ¸¶·Î ÀÚ¸£±â
+			String[] elementArray = element.split(","); // ì½¤ë§ˆë¡œ ìë¥´ê¸°
 
 			for (int i = 0; i < elementArray.length; i++) {
-				pque.add(Integer.parseInt(elementArray[i])); // ¿ì¼±¼øÀ§ Å¥¿¡ ÀÔ·ÂÇÑ ¿ä¼ÒµéÀ» ³Ö¾îÁØ´Ù.
+				pque.add(Integer.parseInt(elementArray[i])); // ìš°ì„ ìˆœìœ„ íì— ì…ë ¥í•œ ìš”ì†Œë“¤ì„ ë„£ì–´ì¤€ë‹¤.
 			}
 
 			System.out.println("-------------------------------------------------------");
-			System.out.print("k¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä(±âÁØ ½ºÄÚºô Áö¼ö)");
+			System.out.print("kë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”(ê¸°ì¤€ ìŠ¤ì½”ë¹Œ ì§€ìˆ˜)");
 			int k = sc.nextInt();
 			System.out.println("-------------------------------------------------------");
 
 			// <toArray>
-			// - ¹è¿­À» °¡Á®¿Ã ¼ö ÀÖÀ½.
-			// - poll() °ú ´Ş¸® ¿ä¼Ò¸¦ Áö¿ìÁö ¾Ê°í, ¸®½ºÆ® Ã³·³ ±×³É ¼øÈ¸¸¸ ÇÒ °æ¿ì »ç¿ë
-			// - Á¤·ÄµÈ ¼ø¼­´ë·Î ¼øÈ¸µÇÁö ¾ÊÀ½.
-			// - µé¾î°£ ¼ø¼­µµ ¾Æ´Ô. [0] ¿¡ poll() ÇÒ ¿ä¼Ò¸¸ ¿ÍÀÖ´Â »óÅÂ.
+			// - ë°°ì—´ì„ ê°€ì ¸ì˜¬ ìˆ˜ ìˆìŒ.
+			// - poll() ê³¼ ë‹¬ë¦¬ ìš”ì†Œë¥¼ ì§€ìš°ì§€ ì•Šê³ , ë¦¬ìŠ¤íŠ¸ ì²˜ëŸ¼ ê·¸ëƒ¥ ìˆœíšŒë§Œ í•  ê²½ìš° ì‚¬ìš©
+			// - ì •ë ¬ëœ ìˆœì„œëŒ€ë¡œ ìˆœíšŒë˜ì§€ ì•ŠìŒ.
+			// - ë“¤ì–´ê°„ ìˆœì„œë„ ì•„ë‹˜. [0] ì— poll() í•  ìš”ì†Œë§Œ ì™€ìˆëŠ” ìƒíƒœ.
 
-			boolean tf = false; // Á¶°ÇÀ» ¸¸Á·ÇÏ¸é true ´ëÀÔ
+			boolean tf = false; // ì¡°ê±´ì„ ë§Œì¡±í•˜ë©´ true ëŒ€ì…
 
-			int mixCnt = 0; // ¼¯Àº È½¼ö
+			int mixCnt = 0; // ì„ì€ íšŸìˆ˜
 
 			while (tf == false) {
-				Object[] pqueArray = pque.toArray(); // ¿ì¼±¼øÀ§ Å¥ ¹è¿­È­, ¸ğµç ¿ä¼ÒµéÀ» ²¨³»±â À§ÇÔ
-				int arrLength = pqueArray.length; // Å¥ÀÇ »çÀÌÁî
+				Object[] pqueArray = pque.toArray(); // ìš°ì„ ìˆœìœ„ í ë°°ì—´í™”, ëª¨ë“  ìš”ì†Œë“¤ì„ êº¼ë‚´ê¸° ìœ„í•¨
+				int arrLength = pqueArray.length; // íì˜ ì‚¬ì´ì¦ˆ
 
-				// System.out.println("Å¥ÀÇ »çÀÌÁî: " + arrLength);
+				// System.out.println("íì˜ ì‚¬ì´ì¦ˆ: " + arrLength);
 
-				int nodeCnt = 0; // kÀÌ»óÀÎ ³ëµåÀÇ ¼ö
+				int nodeCnt = 0; // kì´ìƒì¸ ë…¸ë“œì˜ ìˆ˜
 
 				for (int i = 0; i < arrLength; i++) {
 					if (Integer.parseInt(pqueArray[i].toString()) >= k) {
-						++nodeCnt; // kÀÌ»óÀÌ¸é +1
-						if (nodeCnt == arrLength) { // ¸ğµç ³ëµå°¡ kÀÌ»óÀÌ¸é
-							tf = true; // ¹İº¹¹®À» ¸ØÃá´Ù
-							System.out.println("¸ğµç À½½ÄÀÇ ½ºÄÚºôÁö¼ö°¡ kÀÌ»óÀÌ¶ó´Â Á¶°ÇÀ» ¸¸Á·ÇÕ´Ï´Ù.");
-							System.out.println("¼¯Àº È½¼ö´Â " + mixCnt + "ÀÔ´Ï´Ù.");
+						++nodeCnt; // kì´ìƒì´ë©´ +1
+						if (nodeCnt == arrLength) { // ëª¨ë“  ë…¸ë“œê°€ kì´ìƒì´ë©´
+							tf = true; // ë°˜ë³µë¬¸ì„ ë©ˆì¶˜ë‹¤
+							System.out.println("ëª¨ë“  ìŒì‹ì˜ ìŠ¤ì½”ë¹Œì§€ìˆ˜ê°€ kì´ìƒì´ë¼ëŠ” ì¡°ê±´ì„ ë§Œì¡±í•©ë‹ˆë‹¤.");
+							System.out.println("ì„ì€ íšŸìˆ˜ëŠ” " + mixCnt + "ì…ë‹ˆë‹¤.");
 							System.out.println("-------------------------------------------------------");
 							break;
 						}
@@ -60,28 +60,28 @@ public class MoreSpicy {
 				}
 
 				if (tf == false) {
-					System.out.println("½ºÄÚºôÁö¼ö(k) -> " + k + " ÀÌ»óÀÎ À½½Ä ¼ö : " + nodeCnt);
+					System.out.println("ìŠ¤ì½”ë¹Œì§€ìˆ˜(k) -> " + k + " ì´ìƒì¸ ìŒì‹ ìˆ˜ : " + nodeCnt);
 					int element_1 = pque.poll();
-					System.out.println("Ã¹¹øÂ°·Î ÀÛÀº ½ºÄÚºôÁö¼ö: " + element_1);
+					System.out.println("ì²«ë²ˆì§¸ë¡œ ì‘ì€ ìŠ¤ì½”ë¹Œì§€ìˆ˜: " + element_1);
 					int element_2 = pque.poll();
-					System.out.println("µÎ¹øÂ°·Î ÀÛÀº ½ºÄÚºôÁö¼ö: " + element_2);
+					System.out.println("ë‘ë²ˆì§¸ë¡œ ì‘ì€ ìŠ¤ì½”ë¹Œì§€ìˆ˜: " + element_2);
 
 					int mixElement = element_1 + (element_2 * 2);
-					System.out.println("¼¯Àº ½ºÄÚºô Áö¼ö -> " + element_1 + " + " + "(" + element_2 + " * 2) = " + mixElement);
+					System.out.println("ì„ì€ ìŠ¤ì½”ë¹Œ ì§€ìˆ˜ -> " + element_1 + " + " + "(" + element_2 + " * 2) = " + mixElement);
 					System.out.println("-------------------------------------------------------");
 					pque.add(mixElement);
 
 					// <Iterator>
-					// - ¸®½ºÆ® Ã³·³ ±×³É ¼øÈ¸¸¸ ÇÒ °æ¿ì »ç¿ë
-					// - Á¤·ÄµÈ ¼ø¼­´ë·Î ¼øÈ¸µÇÁö ¾ÊÀ½
-					// - µé¾î°£ ¼ø¼­µµ ¾Æ´Ô
-					// - [0] ¿¡ poll() ÇÒ ¿ä¼Ò¸¸ ¿ÍÀÖ´Â »óÅÂ.
+					// - ë¦¬ìŠ¤íŠ¸ ì²˜ëŸ¼ ê·¸ëƒ¥ ìˆœíšŒë§Œ í•  ê²½ìš° ì‚¬ìš©
+					// - ì •ë ¬ëœ ìˆœì„œëŒ€ë¡œ ìˆœíšŒë˜ì§€ ì•ŠìŒ
+					// - ë“¤ì–´ê°„ ìˆœì„œë„ ì•„ë‹˜
+					// - [0] ì— poll() í•  ìš”ì†Œë§Œ ì™€ìˆëŠ” ìƒíƒœ.
 
 					Iterator<Integer> afterIter = pque.iterator();
 
 					int idx = 1;
 
-					System.out.println("Å¥ ³ëµåµé È®ÀÎ!!");
+					System.out.println("í ë…¸ë“œë“¤ í™•ì¸!!");
 					while (afterIter.hasNext()) {
 						int i = afterIter.next();
 						System.out.println(i);

@@ -19,7 +19,7 @@ public class BiggestNumber_1 {
 
 		Integer[] newNumbers = new Integer[sb.length()];
 
-		System.out.println("Integer ¹è¿­ÀÇ ±æÀÌ: " + sb.length());
+		//System.out.println("Integer ê°¯ìˆ˜: " + sb.length());
 
 		for (int i = 0; i < sb.length(); i++) {
 			newNumbers[i] = Integer.parseInt(sb.substring(i, i + 1));
@@ -28,7 +28,7 @@ public class BiggestNumber_1 {
 
 		Arrays.sort(newNumbers, Collections.reverseOrder());
 
-		System.out.println("sort µÈ ¹è¿­: " + Arrays.toString(newNumbers));
+		System.out.println("sort: " + Arrays.toString(newNumbers));
 
 		StringBuffer answer = new StringBuffer();
 
@@ -36,7 +36,7 @@ public class BiggestNumber_1 {
 			answer.append(n.toString());
 		}
 
-		System.out.println("´ä: " + answer);
+		System.out.println("ë‹µ: " + answer);
 	}
 
 }

@@ -32,6 +32,3 @@ public class MoreSpicy_answer {
 	}
 
 }
-
-
-
